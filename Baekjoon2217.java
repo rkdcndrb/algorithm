@@ -14,12 +14,11 @@ public class Baekjoon2217 {
         	arr[i] = Integer.parseInt(br.readLine());
         }
         
-        Arrays.sort(arr);
+        Arrays.sort(arr); // 입력 로프 정
         
-        int tot = 1;
-        int sum = 0;
-        for(int i = n-1; i >= 0; i--) {
-        	if(arr[i] * tot > max) max = arr[i] * tot;
+        int tot = 1; //로프 총 개
+        for(int i = n-1; i >= 0; i--) { // 최소 무게를 버틸 수 있는 로프의 최대 하중을 구하기 위한 역순 포
+        	if(arr[i] * tot > max) max = arr[i] * tot; // 최소 무게를 버틸 수 있는 로프의 최대 하중의 무게 구하
         	tot++;
         }
         
